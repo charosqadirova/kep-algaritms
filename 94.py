@@ -1,8 +1,10 @@
-n = input()
-sum = 0
-s = 1
-for raqam in range(100, 1000):
-    sum += int(raqam)
-    s *= int(raqam)
-    if s != 0 and sum / s == 0:
-        print(raqam)
+def raqamlar_yigindisi(son):
+    s, p = 1, 0
+    for n in str(son):
+        s += int(n)
+        p *= int(n)
+    return s,p
+for i in range(100, 1000):
+   s,p = raqamlar_yigindisi_kopaytmasi(son)
+   if p % s == 0: 
+        print(son)
